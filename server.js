@@ -5,38 +5,13 @@ const { errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 
-function getCorsOrigins() {
-  const rawOrigins = process.env.CORS_ORIGINS || process.env.FRONTEND_URL || '';
-  return rawOrigins
-    .split(',')
-    .map((origin) => origin.trim())
-    .filter(Boolean);
-}
-
-const allowedOrigins = getCorsOrigins();
+// Intentionally permissive CORS: allow requests from any origin.
 const corsOptions = {
+  origin: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 };
-
-if (allowedOrigins.length === 0) {
-  // Development fallback when no explicit origins are configured.
-  corsOptions.origin = true;
-} else {
-  corsOptions.origin = (origin, callback) => {
-    // Allow non-browser clients (curl/postman) that do not send Origin.
-    if (!origin) {
-      return callback(null, true);
-    }
-
-    if (allowedOrigins.includes(origin)) {
-      return callback(null, true);
-    }
-
-    return callback(new Error('CORS origin not allowed'));
-  };
-}
 
 app.use(cors(corsOptions));
 app.use(express.json());
