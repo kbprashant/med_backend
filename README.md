@@ -303,13 +303,12 @@ Use `.env.example` as a template and configure these values in your hosting plat
 - `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `EMAIL_FROM`
 - `OTP_EXPIRY_MINUTES`, `OTP_MAX_ATTEMPTS`
 - `EXTRACTION_MODE`
-- `CORS_ORIGINS` (comma-separated list of allowed frontend origins)
 - `FIREBASE_SERVICE_ACCOUNT` or `FIREBASE_SERVICE_ACCOUNT_PATH`
 
 ### CORS behavior
 
-- If `CORS_ORIGINS` (or `FRONTEND_URL`) is set, only those origins are allowed.
-- If none is set, the server allows any origin as a development fallback.
+- Server is currently configured to allow all origins.
+- `CORS_ORIGINS` and `FRONTEND_URL` are not enforced unless restrictive CORS logic is reintroduced.
 
 ### Docker deployment (optional)
 
