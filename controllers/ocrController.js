@@ -3,7 +3,11 @@ const sharp = require('sharp');
 const fs = require('fs').promises;
 const fsSync = require('fs');
 const path = require('path');
-const pdfPoppler = require('pdf-poppler');
+const { execFile } = require('child_process');
+const { promisify } = require('util');
+
+const execFileAsync = promisify(execFile);
+let pdfPoppler = null;
 
 // pdf-parse - handle both default and direct exports
 // Some Node.js versions require { default: function }, others just function
@@ -19,6 +23,36 @@ const pdf = pdfParseModule.default || pdfParseModule;
 const MAX_WIDTH = 1200;
 const MAX_HEIGHT = 1600;
 const JPEG_QUALITY = 85;
+
+async function convertPdfToPngLinux(pdfPath, tempDir) {
+  const outputPrefix = path.join(tempDir, 'page');
+
+  try {
+    await execFileAsync('pdftoppm', ['-png', pdfPath, outputPrefix], {
+      maxBuffer: 50 * 1024 * 1024,
+    });
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      throw new Error('pdftoppm is not installed. Install poppler-utils in the runtime environment.');
+    }
+
+    const stderr = error.stderr ? ` ${String(error.stderr).trim()}` : '';
+    throw new Error(`pdftoppm conversion failed.${stderr}`.trim());
+  }
+}
+
+async function convertPdfToPngWithPoppler(pdfPath, tempDir) {
+  if (!pdfPoppler) {
+    pdfPoppler = require('pdf-poppler');
+  }
+
+  await pdfPoppler.convert(pdfPath, {
+    format: 'png',
+    out_dir: tempDir,
+    out_prefix: 'page',
+    page: null,
+  });
+}
 
 /**
  * Run OCR on image files only
@@ -94,16 +128,14 @@ async function convertAndRunOCR(pdfPath) {
     await fs.mkdir(tempDir, { recursive: true });
     console.log(`   📁 Temp directory: ${tempDir}`);
     
-    // PDF to PNG conversion options
-    const opts = {
-      format: 'png',
-      out_dir: tempDir,
-      out_prefix: 'page',
-      page: null // Convert all pages
-    };
-    
-    // Convert PDF pages to PNG images
-    await pdfPoppler.convert(pdfPath, opts);
+    if (process.platform === 'linux') {
+      console.log('   🐧 Linux detected: using pdftoppm for PDF conversion');
+      await convertPdfToPngLinux(pdfPath, tempDir);
+    } else {
+      console.log('   🧰 Using pdf-poppler for PDF conversion');
+      await convertPdfToPngWithPoppler(pdfPath, tempDir);
+    }
+
     console.log('   ✅ PDF converted to PNG images');
     
     // Read all converted PNG files
