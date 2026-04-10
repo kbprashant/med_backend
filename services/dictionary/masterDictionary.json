@@ -1,0 +1,2079 @@
+{
+  "reportTypes": {
+    "CBC": {
+      "displayName": "Complete Blood Count",
+      "aliases": [
+        "Complete Blood Picture",
+        "CBP",
+        "Hemogram"
+      ],
+      "parameters": {
+        "HEMOGLOBIN": {
+          "displayName": "Hemoglobin",
+          "synonyms": [
+            "hemoglobin",
+            "haemoglobin",
+            "hb",
+            "hgb",
+            "hemoglobin level",
+            "haemoglobin level"
+          ],
+          "expectedUnits": ["g/dL", "g/L", "g%"],
+          "valueType": "numeric",
+          "normalRange": {
+            "male": {
+              "min": 13.0,
+              "max": 17.0
+            },
+            "female": {
+              "min": 12.0,
+              "max": 15.0
+            }
+          }
+        },
+        "RBC_COUNT": {
+          "displayName": "RBC Count",
+          "synonyms": [
+            "rbc count",
+            "rbccount",
+            "rbc_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "WBC_COUNT": {
+          "displayName": "WBC Count",
+          "synonyms": [
+            "wbc count",
+            "wbccount",
+            "wbc_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PLATELET_COUNT": {
+          "displayName": "Platelet Count",
+          "synonyms": [
+            "platelet count",
+            "plateletcount",
+            "platelet_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "HEMATOCRIT": {
+          "displayName": "Hematocrit",
+          "synonyms": [
+            "hematocrit",
+            "hematocrit",
+            "hematocrit"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "MCV": {
+          "displayName": "MCV",
+          "synonyms": [
+            "mcv",
+            "mcv",
+            "mcv"
+          ],
+          "expectedUnits": ["fL", "fl"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "MCH": {
+          "displayName": "MCH",
+          "synonyms": [
+            "mch",
+            "mch",
+            "mch"
+          ],
+          "expectedUnits": ["pg"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "MCHC": {
+          "displayName": "MCHC",
+          "synonyms": [
+            "mchc",
+            "mchc",
+            "mchc"
+          ],
+          "expectedUnits": ["g/dl", "g/dL", "gdl", "gdL", "%"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "RDW": {
+          "displayName": "RDW",
+          "synonyms": [
+            "rdw",
+            "rdw",
+            "rdw"
+          ],
+          "expectedUnits": ["%"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "NEUTROPHILS": {
+          "displayName": "Neutrophils",
+          "synonyms": [
+            "neutrophil",
+            "neutro",
+            "neutrophil count",
+            "poly"
+          ],
+          "expectedUnits": ["%", "percent"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 40,
+            "max": 75
+          }
+        },
+        "LYMPHOCYTES": {
+          "displayName": "Lymphocytes",
+          "synonyms": [
+            "lymphocyte",
+            "lymph",
+            "lymphocyte count"
+          ],
+          "expectedUnits": ["%", "percent"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 20,
+            "max": 45
+          }
+        },
+        "MONOCYTES": {
+          "displayName": "Monocytes",
+          "synonyms": [
+            "monocyte",
+            "mono",
+            "monocyte count"
+          ],
+          "expectedUnits": ["%", "percent"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 2,
+            "max": 10
+          }
+        },
+        "EOSINOPHILS": {
+          "displayName": "Eosinophils",
+          "synonyms": [
+            "eosinophil",
+            "eos",
+            "eosinophil count"
+          ],
+          "expectedUnits": ["%", "percent"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 0,
+            "max": 6
+          }
+        },
+        "BASOPHILS": {
+          "displayName": "Basophils",
+          "synonyms": [
+            "basophil",
+            "baso",
+            "basophil count"
+          ],
+          "expectedUnits": ["%", "percent"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 0,
+            "max": 2
+          }
+        },
+        "ABSOLUTE_NEUTROPHIL_COUNT": {
+          "displayName": "Absolute Neutrophil Count",
+          "synonyms": [
+            "absolute neutrophil count",
+            "absoluteneutrophilcount",
+            "absolute_neutrophil_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ABSOLUTE_LYMPHOCYTE_COUNT": {
+          "displayName": "Absolute Lymphocyte Count",
+          "synonyms": [
+            "absolute lymphocyte count",
+            "absolutelymphocytecount",
+            "absolute_lymphocyte_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ABSOLUTE_MONOCYTE_COUNT": {
+          "displayName": "Absolute Monocyte Count",
+          "synonyms": [
+            "absolute monocyte count",
+            "absolutemonocytecount",
+            "absolute_monocyte_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ABSOLUTE_EOSINOPHIL_COUNT": {
+          "displayName": "Absolute Eosinophil Count",
+          "synonyms": [
+            "absolute eosinophil count",
+            "absoluteeosinophilcount",
+            "absolute_eosinophil_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ABSOLUTE_BASOPHIL_COUNT": {
+          "displayName": "Absolute Basophil Count",
+          "synonyms": [
+            "absolute basophil count",
+            "absolutebasophilcount",
+            "absolute_basophil_count"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "NRBC": {
+          "displayName": "NRBC",
+          "synonyms": [
+            "nrbc",
+            "nrbc",
+            "nrbc"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "LFT": {
+      "displayName": "Liver Function Test",
+      "aliases": [
+        "Liver Profile",
+        "Hepatic Panel"
+      ],
+      "parameters": {
+        "ALT": {
+          "displayName": "ALT (SGPT)",
+          "synonyms": [
+            "alt",
+            "sgpt",
+            "alt (sgpt)",
+            "alt(sgpt)",
+            "alt sgpt",
+            "alaninetransaminase",
+            "alanine transaminase"
+          ],
+          "expectedUnits": ["U/L", "IU/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "AST": {
+          "displayName": "AST (SGOT)",
+          "synonyms": [
+            "ast",
+            "sgot",
+            "ast (sgot)",
+            "ast(sgot)",
+            "ast sgot",
+            "aspartate transaminase",
+            "aspartatetransaminase"
+          ],
+          "expectedUnits": ["U/L", "IU/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "AST_ALT_RATIO": {
+          "displayName": "AST/ALT Ratio",
+          "synonyms": [
+            "ast/alt ratio",
+            "ast:alt ratio",
+            "ast alt ratio",
+            "ast/altratio",
+            "ast:altratio",
+            "de ritis ratio"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ALKALINE_PHOSPHATASE": {
+          "displayName": "Alkaline Phosphatase",
+          "synonyms": [
+            "alkaline phosphatase",
+            "alkalinephosphatase",
+            "alkaline_phosphatase",
+            "alp",
+            "alk phos",
+            "alkphos"
+          ],
+          "expectedUnits": ["U/L", "IU/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "GAMMA_GT": {
+          "displayName": "GGT",
+          "synonyms": [
+            "ggt",
+            "ggtp",
+            "gamma gt",
+            "gammagt",
+            "gamma_gt",
+            "gamma glutamyl transferase",
+            "gamma-glutamyl transferase",
+            "gamma glutamyltransferase"
+          ],
+          "expectedUnits": ["U/L", "IU/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TOTAL_BILIRUBIN": {
+          "displayName": "Bilirubin Total",
+          "synonyms": [
+            "total bilirubin",
+            "totalbilirubin",
+            "total_bilirubin",
+            "bilirubin total",
+            "bilirubintotal",
+            "bilirubin_total",
+            "blirubln total",
+            "blirubln",
+            "bilirubln total"
+          ],
+          "expectedUnits": ["mg/dL", "μmol/L", "ang/dL"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "DIRECT_BILIRUBIN": {
+          "displayName": "Bilirubin Direct",
+          "synonyms": [
+            "direct bilirubin",
+            "directbilirubin",
+            "direct_bilirubin",
+            "bilirubin direct",
+            "bilirubindirect",
+            "bilirubin_direct",
+            "bjlirubln direct",
+            "bilirubln direct",
+            "conjugated bilirubin"
+          ],
+          "expectedUnits": ["mg/dL", "μmol/L", "ng/dL"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "INDIRECT_BILIRUBIN": {
+          "displayName": "Bilirubin Indirect",
+          "synonyms": [
+            "indirect bilirubin",
+            "indirectbilirubin",
+            "indirect_bilirubin",
+            "bilirubin indirect",
+            "bilirubinindirect",
+            "bilirubin_indirect",
+            "bilirubln lndlrect",
+            "bilirubln indirect",
+            "unconjugated bilirubin"
+          ],
+          "expectedUnits": ["mg/dL", "μmol/L", "ng/dL"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TOTAL_PROTEIN": {
+          "displayName": "Total Protein",
+          "synonyms": [
+            "total protein",
+            "totalprotein",
+            "total_protein",
+            "serum protein",
+            "serumprotein"
+          ],
+          "expectedUnits": ["g/dL", "g/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ALBUMIN": {
+          "displayName": "Albumin",
+          "synonyms": [
+            "albumin",
+            "serum albumin",
+            "serumalbumin"
+          ],
+          "expectedUnits": ["g/dL", "g/L", "g'dL"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "GLOBULIN": {
+          "displayName": "Globulin",
+          "synonyms": [
+            "globulin",
+            "serum globulin",
+            "serumglobulin",
+            "giut"
+          ],
+          "expectedUnits": ["g/dL", "g/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "A_G_RATIO": {
+          "displayName": "A/G Ratio",
+          "synonyms": [
+            "a/g ratio",
+            "a/gratio",
+            "a/g_ratio",
+            "a:g ratio",
+            "a:gratio",
+            "albumin globulin ratio",
+            "albumin/globulin ratio"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "LDH": {
+          "displayName": "LDH",
+          "synonyms": [
+            "ldh",
+            "lactate dehydrogenase",
+            "lactic dehydrogenase"
+          ],
+          "expectedUnits": ["U/L", "IU/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "KFT": {
+      "displayName": "Kidney Function Test",
+      "aliases": [
+        "Renal Profile",
+        "Renal Package",
+        "RFT",
+        "Kidney Profile"
+      ],
+      "parameters": {
+        "BLOOD_SUGAR_RANDOM": {
+          "displayName": "Blood Sugar (Random)",
+          "synonyms": [
+            "blood sugar(r)",
+            "blood sugar( r)",
+            "blood sugar (r)",
+            "blood sugar (random)",
+            "random blood sugar",
+            "rbs",
+            "blood glucose (random)"
+          ],
+          "expectedUnits": ["mg/dL", "mg/dl", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 70,
+            "max": 160
+          }
+        },
+        "CREATININE": {
+          "displayName": "Creatinine",
+          "synonyms": [
+            "creatinine",
+            "serum creatinine",
+            "creat",
+            "cr"
+          ],
+          "expectedUnits": ["mg/dL", "mg/dl", "μmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 0.6,
+            "max": 1.2
+          }
+        },
+        "UREA": {
+          "displayName": "Urea",
+          "synonyms": [
+            "urea",
+            "irea",
+            "blood urea",
+            "bun",
+            "urea nitrogen"
+          ],
+          "expectedUnits": ["mg/dL", "mg/dl", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 15,
+            "max": 40
+          }
+        },
+        "BLOOD_UREA_NITROGEN": {
+          "displayName": "Blood Urea Nitrogen",
+          "synonyms": [
+            "blood urea nitrogen",
+            "bloodureanitrogen",
+            "blood_urea_nitrogen"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "URIC_ACID": {
+          "displayName": "Uric Acid",
+          "synonyms": [
+            "uric acid",
+            "uricacid",
+            "uric_acid"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "SODIUM": {
+          "displayName": "Sodium",
+          "synonyms": [
+            "sodium",
+            "sodiunı",
+            "sodiuni",
+            "sodiun",
+            "sodium (na+)",
+            "na+",
+            "na",
+            "serum sodium"
+          ],
+          "expectedUnits": ["mEq/L", "mEq/l", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 135,
+            "max": 145
+          }
+        },
+        "POTASSIUM": {
+          "displayName": "Potassium",
+          "synonyms": [
+            "potassium",
+            "potassium(k+)",
+            "potassium (k+)",
+            "k+",
+            "k",
+            "serum potassium"
+          ],
+          "expectedUnits": ["mEq/L", "mEq/l", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 3.5,
+            "max": 5.5
+          }
+        },
+        "CHLORIDE": {
+          "displayName": "Chloride",
+          "synonyms": [
+            "chloride",
+            "chloride(c-)",
+            "chloride (c-)",
+            "cl-",
+            "cl",
+            "serum chloride"
+          ],
+          "expectedUnits": ["mEq/L", "mEq/l", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 97,
+            "max": 107
+          }
+        },
+        "CALCIUM": {
+          "displayName": "Calcium",
+          "synonyms": [
+            "calcium",
+            "calcium",
+            "calcium"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PHOSPHORUS": {
+          "displayName": "Phosphorus",
+          "synonyms": [
+            "phosphorus",
+            "phosphorus",
+            "phosphorus"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "MAGNESIUM": {
+          "displayName": "Magnesium",
+          "synonyms": [
+            "magnesium",
+            "magnesium",
+            "magnesium"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "EGFR": {
+          "displayName": "eGFR",
+          "synonyms": [
+            "egfr",
+            "egfr",
+            "egfr"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "LIPID": {
+      "displayName": "Lipid Profile",
+      "aliases": [
+        "Cholesterol Panel"
+      ],
+      "parameters": {
+        "TOTAL_CHOLESTEROL": {
+          "displayName": "Total Cholesterol",
+          "synonyms": [
+            "total cholesterol",
+            "totalcholesterol",
+            "total_cholesterol",
+            "cholesterol total",
+            "cholesteroltotal",
+            "chalesteral total",
+            "chalesterol total",
+            "chalesterot total",
+            "cholesterol, total"
+          ],
+          "expectedUnits": ["mg/dL", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TRIGLYCERIDES": {
+          "displayName": "Triglycerides",
+          "synonyms": [
+            "triglycerides",
+            "triglyceride",
+            "tg",
+            "trigs",
+            "trigtycerides"
+          ],
+          "expectedUnits": ["mg/dL", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "NON_HDL_CHOLESTEROL": {
+          "displayName": "Non-HDL Cholesterol",
+          "synonyms": [
+            "non-hdl cholesterol",
+            "non-hdlcholesterol",
+            "non-hdl_cholesterol",
+            "non-hdl chalesterol",
+            "non-hdl chalesteral",
+            "nonhdl cholesterol",
+            "non hdl cholesterol"
+          ],
+          "expectedUnits": ["mg/dL", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "HDL_CHOLESTEROL": {
+          "displayName": "HDL Cholesterol",
+          "synonyms": [
+            "hdl cholesterol",
+            "hdlcholesterol",
+            "hdl_cholesterol",
+            "hdl chalesterol",
+            "hdl chalesteral",
+            "hdl chalesterot",
+            "high density lipoprotein",
+            "hdl-c"
+          ],
+          "expectedUnits": ["mg/dL", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "LDL_CHOLESTEROL": {
+          "displayName": "LDL Cholesterol",
+          "synonyms": [
+            "ldl cholesterol",
+            "ldlcholesterol",
+            "ldl_cholesterol",
+            "ldl chalesterol",
+            "ldl chalesteral",
+            "ldl chalesterot",
+            "low density lipoprotein",
+            "ldl-c"
+          ],
+          "expectedUnits": ["mg/dL", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "VLDL_CHOLESTEROL": {
+          "displayName": "VLDL Cholesterol",
+          "synonyms": [
+            "vldl cholesterol",
+            "vldlcholesterol",
+            "vldl_cholesterol",
+            "vldl chalesterol",
+            "vldl chalesteral",
+            "vldl chalesterot",
+            "very low density lipoprotein",
+            "vldl-c"
+          ],
+          "expectedUnits": ["mg/dL", "mmol/L"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CHOLESTEROL_HDL_RATIO": {
+          "displayName": "Total Cholesterol/HDL Ratio",
+          "synonyms": [
+            "cholesterol/hdl ratio",
+            "cholesterol/hdlratio",
+            "cholesterol/hdl_ratio",
+            "tc/hdl ratio",
+            "chol/hdl ratio",
+            "total cholesterol/hdl ratio"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "THYROID": {
+      "displayName": "Thyroid Panel",
+      "aliases": [
+        "Thyroid Function Test",
+        "TFT"
+      ],
+      "parameters": {
+        "TSH": {
+          "displayName": "TSH",
+          "synonyms": [
+            "tsh",
+            "thyroid stimulating hormone",
+            "thyroid stimulating",
+            "thyroidstimulatinghormone",
+            "t s h",
+            "serum tsh"
+          ],
+          "expectedUnits": ["uIU/mL", "mIU/L", "ul/ml"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 0.34,
+            "max": 5.60
+          }
+        },
+        "FREE_T3": {
+          "displayName": "Free T3",
+          "synonyms": [
+            "free t3",
+            "freet3",
+            "free_t3",
+            "ft3",
+            "f t3",
+            "free triidothyronine",
+            "freetriidothyronine",
+            "triidothyronine"
+          ],
+          "expectedUnits": ["pg/mL", "pmol/L", "ng/dL"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 2.50,
+            "max": 3.90
+          }
+        },
+        "FREE_T4": {
+          "displayName": "Free T4",
+          "synonyms": [
+            "free t4",
+            "freet4",
+            "free_t4",
+            "ft4",
+            "f t4",
+            "free thyroxine",
+            "freethyroxine",
+            "thyroxine"
+          ],
+          "expectedUnits": ["ng/dL", "pmol/L"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 0.61,
+            "max": 1.12
+          }
+        },
+        "TOTAL_T3": {
+          "displayName": "Total T3",
+          "synonyms": [
+            "total t3",
+            "totalt3",
+            "total_t3"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TOTAL_T4": {
+          "displayName": "Total T4",
+          "synonyms": [
+            "total t4",
+            "totalt4",
+            "total_t4"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ANTI_TPO_ANTIBODY": {
+          "displayName": "Anti-TPO Antibody",
+          "synonyms": [
+            "anti-tpo antibody",
+            "anti-tpoantibody",
+            "anti-tpo_antibody"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ANTI_THYROGLOBULIN_ANTIBODY": {
+          "displayName": "Anti-Thyroglobulin Antibody",
+          "synonyms": [
+            "anti-thyroglobulin antibody",
+            "anti-thyroglobulinantibody",
+            "anti-thyroglobulin_antibody"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "DIABETES": {
+      "displayName": "Diabetes Panel",
+      "aliases": [
+        "Glycemic Panel"
+      ],
+      "parameters": {
+        "FASTING_BLOOD_GLUCOSE": {
+          "displayName": "Fasting Blood Glucose",
+          "synonyms": [
+            "fasting blood glucose",
+            "fasting blood sugar",
+            "fasting glucose",
+            "glucose fasting",
+            "glucos fasting",
+            "fasting plasma glucose",
+            "fasting plasma",
+            "fastingbloodglucose",
+            "fastingbloodsugar",
+            "fasting_blood_glucose",
+            "fasting_blood_sugar",
+            "fbs"
+          ],
+          "expectedUnits": ["mg/dL", "mg/dl", "mgs%"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 70,
+            "max": 110
+          }
+        },
+        "POSTPRANDIAL_GLUCOSE": {
+          "displayName": "Postprandial Glucose",
+          "synonyms": [
+            "postprandial glucose",
+            "postprandial blood glucose",
+            "postprandial blood sugar",
+            "post prandial glucose",
+            "post prandial blood glucose",
+            "post prandial blood sugar",
+            "post prandial biood sugar",
+            "postprandial sugar",
+            "post prandial sugar",
+            "post prandial",
+            "postprandialglucose",
+            "postprandial_glucose",
+            "ppbs",
+            "glucose pp",
+            "pp glucose",
+            "pp"
+          ],
+          "expectedUnits": ["mg/dL", "mg/dl", "mgs%"],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 80,
+            "max": 140
+          }
+        },
+        "RANDOM_BLOOD_GLUCOSE": {
+          "displayName": "Random Blood Glucose",
+          "synonyms": [
+            "random blood glucose",
+            "randombloodglucose",
+            "random_blood_glucose"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "HBA1C": {
+          "displayName": "HbA1c",
+          "synonyms": [
+            "hba1c",
+            "hba1c",
+            "hba1c"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ESTIMATED_AVERAGE_GLUCOSE": {
+          "displayName": "Estimated Average Glucose",
+          "synonyms": [
+            "estimated average glucose",
+            "estimatedaverageglucose",
+            "estimated_average_glucose"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "INSULIN": {
+          "displayName": "Insulin",
+          "synonyms": [
+            "insulin",
+            "insulin",
+            "insulin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "C_PEPTIDE": {
+          "displayName": "C-Peptide",
+          "synonyms": [
+            "c-peptide",
+            "c-peptide",
+            "c-peptide"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "CARDIAC": {
+      "displayName": "Cardiac Markers",
+      "aliases": [
+        "Cardiac Enzymes"
+      ],
+      "parameters": {
+        "TROPONIN_I": {
+          "displayName": "Troponin I",
+          "synonyms": [
+            "troponin i",
+            "troponini",
+            "troponin_i"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TROPONIN_T": {
+          "displayName": "Troponin T",
+          "synonyms": [
+            "troponin t",
+            "troponint",
+            "troponin_t"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CK_MB": {
+          "displayName": "CK-MB",
+          "synonyms": [
+            "ck-mb",
+            "ck-mb",
+            "ck-mb"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "BNP": {
+          "displayName": "BNP",
+          "synonyms": [
+            "bnp",
+            "bnp",
+            "bnp"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "NT_PROBNP": {
+          "displayName": "NT-proBNP",
+          "synonyms": [
+            "nt-probnp",
+            "nt-probnp",
+            "nt-probnp"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "MYOGLOBIN": {
+          "displayName": "Myoglobin",
+          "synonyms": [
+            "myoglobin",
+            "myoglobin",
+            "myoglobin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "COAGULATION": {
+      "displayName": "Coagulation Profile",
+      "aliases": [
+        "Clotting Profile"
+      ],
+      "parameters": {
+        "PROTHROMBIN_TIME": {
+          "displayName": "Prothrombin Time",
+          "synonyms": [
+            "prothrombin time",
+            "prothrombintime",
+            "prothrombin_time"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "INR": {
+          "displayName": "INR",
+          "synonyms": [
+            "inr",
+            "inr",
+            "inr"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "APTT": {
+          "displayName": "aPTT",
+          "synonyms": [
+            "aptt",
+            "aptt",
+            "aptt"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "D_DIMER": {
+          "displayName": "D-Dimer",
+          "synonyms": [
+            "d-dimer",
+            "d-dimer",
+            "d-dimer"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "FIBRINOGEN": {
+          "displayName": "Fibrinogen",
+          "synonyms": [
+            "fibrinogen",
+            "fibrinogen",
+            "fibrinogen"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "HORMONE": {
+      "displayName": "Hormone Panel",
+      "aliases": [
+        "Endocrine Panel"
+      ],
+      "parameters": {
+        "TESTOSTERONE": {
+          "displayName": "Testosterone",
+          "synonyms": [
+            "testosterone",
+            "testosterone",
+            "testosterone"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "FREE_TESTOSTERONE": {
+          "displayName": "Free Testosterone",
+          "synonyms": [
+            "free testosterone",
+            "freetestosterone",
+            "free_testosterone"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ESTROGEN": {
+          "displayName": "Estrogen",
+          "synonyms": [
+            "estrogen",
+            "estrogen",
+            "estrogen"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PROGESTERONE": {
+          "displayName": "Progesterone",
+          "synonyms": [
+            "progesterone",
+            "progesterone",
+            "progesterone"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PROLACTIN": {
+          "displayName": "Prolactin",
+          "synonyms": [
+            "prolactin",
+            "prolactin",
+            "prolactin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "LH": {
+          "displayName": "LH",
+          "synonyms": [
+            "lh",
+            "lh",
+            "lh"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "FSH": {
+          "displayName": "FSH",
+          "synonyms": [
+            "fsh",
+            "fsh",
+            "fsh"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CORTISOL": {
+          "displayName": "Cortisol",
+          "synonyms": [
+            "cortisol",
+            "cortisol",
+            "cortisol"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ACTH": {
+          "displayName": "ACTH",
+          "synonyms": [
+            "acth",
+            "acth",
+            "acth"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "GROWTH_HORMONE": {
+          "displayName": "Growth Hormone",
+          "synonyms": [
+            "growth hormone",
+            "growthhormone",
+            "growth_hormone"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "IGF_1": {
+          "displayName": "IGF-1",
+          "synonyms": [
+            "igf-1",
+            "igf-1",
+            "igf-1"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "DHEA_S": {
+          "displayName": "DHEA-S",
+          "synonyms": [
+            "dhea-s",
+            "dhea-s",
+            "dhea-s"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "TUMOR": {
+      "displayName": "Tumor Markers",
+      "aliases": [
+        "Cancer Markers"
+      ],
+      "parameters": {
+        "AFP": {
+          "displayName": "AFP",
+          "synonyms": [
+            "afp",
+            "afp",
+            "afp"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CEA": {
+          "displayName": "CEA",
+          "synonyms": [
+            "cea",
+            "cea",
+            "cea"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CA_125": {
+          "displayName": "CA-125",
+          "synonyms": [
+            "ca-125",
+            "ca-125",
+            "ca-125"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CA_19_9": {
+          "displayName": "CA 19-9",
+          "synonyms": [
+            "ca 19-9",
+            "ca19-9",
+            "ca_19-9"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PSA": {
+          "displayName": "PSA",
+          "synonyms": [
+            "psa",
+            "psa",
+            "psa"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CA_15_3": {
+          "displayName": "CA 15-3",
+          "synonyms": [
+            "ca 15-3",
+            "ca15-3",
+            "ca_15-3"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "BETA_HCG": {
+          "displayName": "Beta-hCG",
+          "synonyms": [
+            "beta-hcg",
+            "beta-hcg",
+            "beta-hcg"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CALCITONIN": {
+          "displayName": "Calcitonin",
+          "synonyms": [
+            "calcitonin",
+            "calcitonin",
+            "calcitonin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "ADDITIONAL": {
+      "displayName": "Additional Clinical Parameters",
+      "aliases": [
+        "Extended Lab Panel"
+      ],
+      "parameters": {
+        "FERRITIN": {
+          "displayName": "Ferritin",
+          "synonyms": [
+            "ferritin",
+            "ferritin",
+            "ferritin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "SERUM_IRON": {
+          "displayName": "Serum Iron",
+          "synonyms": [
+            "serum iron",
+            "serumiron",
+            "serum_iron"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TIBC": {
+          "displayName": "TIBC",
+          "synonyms": [
+            "tibc",
+            "tibc",
+            "tibc"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TRANSFERRIN": {
+          "displayName": "Transferrin",
+          "synonyms": [
+            "transferrin",
+            "transferrin",
+            "transferrin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "VITAMIN_D": {
+          "displayName": "Vitamin D",
+          "synonyms": [
+            "vitamin d",
+            "vitamind",
+            "vitamin_d"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "VITAMIN_B12": {
+          "displayName": "Vitamin B12",
+          "synonyms": [
+            "vitamin b12",
+            "vitaminb12",
+            "vitamin_b12"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "FOLATE": {
+          "displayName": "Folate",
+          "synonyms": [
+            "folate",
+            "folate",
+            "folate"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CRP": {
+          "displayName": "CRP",
+          "synonyms": [
+            "crp",
+            "crp",
+            "crp"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ESR": {
+          "displayName": "ESR",
+          "synonyms": [
+            "esr",
+            "esr",
+            "esr"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PROCALCITONIN": {
+          "displayName": "Procalcitonin",
+          "synonyms": [
+            "procalcitonin",
+            "procalcitonin",
+            "procalcitonin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "INTERLEUKIN_6": {
+          "displayName": "Interleukin-6",
+          "synonyms": [
+            "interleukin-6",
+            "interleukin-6",
+            "interleukin-6"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "HIV_1_AND_2": {
+          "displayName": "HIV 1 & 2",
+          "synonyms": [
+            "hiv 1 & 2",
+            "hiv1&2",
+            "hiv_1_&_2"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "HBSAG": {
+          "displayName": "HBsAg",
+          "synonyms": [
+            "hbsag",
+            "hbsag",
+            "hbsag"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ANTI_HCV": {
+          "displayName": "Anti-HCV",
+          "synonyms": [
+            "anti-hcv",
+            "anti-hcv",
+            "anti-hcv"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "DENGUE_NS1": {
+          "displayName": "Dengue NS1",
+          "synonyms": [
+            "dengue ns1",
+            "denguens1",
+            "dengue_ns1"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "DENGUE_IGM": {
+          "displayName": "Dengue IgM",
+          "synonyms": [
+            "dengue igm",
+            "dengueigm",
+            "dengue_igm"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "DENGUE_IGG": {
+          "displayName": "Dengue IgG",
+          "synonyms": [
+            "dengue igg",
+            "dengueigg",
+            "dengue_igg"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "MALARIA_PARASITE": {
+          "displayName": "Malaria Parasite",
+          "synonyms": [
+            "malaria parasite",
+            "malariaparasite",
+            "malaria_parasite"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TYPHOID_IGM": {
+          "displayName": "Typhoid IgM",
+          "synonyms": [
+            "typhoid igm",
+            "typhoidigm",
+            "typhoid_igm"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "TYPHOID_IGG": {
+          "displayName": "Typhoid IgG",
+          "synonyms": [
+            "typhoid igg",
+            "typhoidigg",
+            "typhoid_igg"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PH": {
+          "displayName": "pH",
+          "synonyms": [
+            "ph",
+            "ph",
+            "ph"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PCO2": {
+          "displayName": "pCO2",
+          "synonyms": [
+            "pco2",
+            "pco2",
+            "pco2"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PO2": {
+          "displayName": "pO2",
+          "synonyms": [
+            "po2",
+            "po2",
+            "po2"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "HCO3": {
+          "displayName": "HCO3",
+          "synonyms": [
+            "hco3",
+            "hco3",
+            "hco3"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "BASE_EXCESS": {
+          "displayName": "Base Excess",
+          "synonyms": [
+            "base excess",
+            "baseexcess",
+            "base_excess"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "OXYGEN_SATURATION": {
+          "displayName": "Oxygen Saturation",
+          "synonyms": [
+            "oxygen saturation",
+            "oxygensaturation",
+            "oxygen_saturation"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "LACTATE": {
+          "displayName": "Lactate",
+          "synonyms": [
+            "lactate",
+            "lactate",
+            "lactate"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "AMYLASE": {
+          "displayName": "Amylase",
+          "synonyms": [
+            "amylase",
+            "amylase",
+            "amylase"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "LIPASE": {
+          "displayName": "Lipase",
+          "synonyms": [
+            "lipase",
+            "lipase",
+            "lipase"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PARATHYROID_HORMONE": {
+          "displayName": "Parathyroid Hormone",
+          "synonyms": [
+            "parathyroid hormone",
+            "parathyroidhormone",
+            "parathyroid_hormone"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "IGG": {
+          "displayName": "IgG",
+          "synonyms": [
+            "igg",
+            "igg",
+            "igg"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "IGA": {
+          "displayName": "IgA",
+          "synonyms": [
+            "iga",
+            "iga",
+            "iga"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "IGM": {
+          "displayName": "IgM",
+          "synonyms": [
+            "igm",
+            "igm",
+            "igm"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "IGE": {
+          "displayName": "IgE",
+          "synonyms": [
+            "ige",
+            "ige",
+            "ige"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "LITHIUM": {
+          "displayName": "Lithium",
+          "synonyms": [
+            "lithium",
+            "lithium",
+            "lithium"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "PHENYTOIN": {
+          "displayName": "Phenytoin",
+          "synonyms": [
+            "phenytoin",
+            "phenytoin",
+            "phenytoin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "VALPROIC_ACID": {
+          "displayName": "Valproic Acid",
+          "synonyms": [
+            "valproic acid",
+            "valproicacid",
+            "valproic_acid"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "CARBAMAZEPINE": {
+          "displayName": "Carbamazepine",
+          "synonyms": [
+            "carbamazepine",
+            "carbamazepine",
+            "carbamazepine"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "DIGOXIN": {
+          "displayName": "Digoxin",
+          "synonyms": [
+            "digoxin",
+            "digoxin",
+            "digoxin"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "AMH": {
+          "displayName": "AMH",
+          "synonyms": [
+            "amh",
+            "amh",
+            "amh"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "ESTRADIOL": {
+          "displayName": "Estradiol",
+          "synonyms": [
+            "estradiol",
+            "estradiol",
+            "estradiol"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {}
+        }
+      }
+    },
+    "URINE": {
+      "displayName": "Urine Examination",
+      "aliases": [
+        "Routine Urine Examination",
+        "Urine Analysis",
+        "Urinalysis",
+        "Urine Test",
+        "Complete Urine Examination"
+      ],
+      "parameters": {
+        "QUANTITY": {
+          "displayName": "Quantity",
+          "synonyms": [
+            "quantity",
+            "volume"
+          ],
+          "expectedUnits": ["ml", "mL"],
+          "valueType": "numeric",
+          "normalRange": {}
+        },
+        "COLOR": {
+          "displayName": "Color",
+          "synonyms": [
+            "color",
+            "colour"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "APPEARANCE": {
+          "displayName": "Appearance",
+          "synonyms": [
+            "appearance",
+            "clarity",
+            "turbidity"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "DEPOSIT": {
+          "displayName": "Deposit",
+          "synonyms": [
+            "deposit",
+            "sediment"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "PH": {
+          "displayName": "pH",
+          "synonyms": [
+            "ph",
+            "reaction"
+          ],
+          "expectedUnits": [],
+          "valueType": "mixed",
+          "normalRange": {
+            "min": 4.5,
+            "max": 8.0
+          }
+        },
+        "SPECIFIC_GRAVITY": {
+          "displayName": "Specific Gravity",
+          "synonyms": [
+            "specific gravity",
+            "sp gravity",
+            "sp gr",
+            "sg",
+            "specilc gravty",
+            "specil:c gravty"
+          ],
+          "expectedUnits": [],
+          "valueType": "numeric",
+          "normalRange": {
+            "min": 1.003,
+            "max": 1.030
+          }
+        },
+        "PROTEIN": {
+          "displayName": "Protein",
+          "synonyms": [
+            "protein",
+            "proteins",
+            "albumin"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "SUGAR": {
+          "displayName": "Sugar",
+          "synonyms": [
+            "sugar",
+            "glucose",
+            "reducing substances"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "KETONE": {
+          "displayName": "Ketone",
+          "synonyms": [
+            "ketone",
+            "ketones",
+            "ketone bodies",
+            "acetone",
+            "acetone bodies"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "BILE_PIGMENT": {
+          "displayName": "Bile Pigment",
+          "synonyms": [
+            "bile pigment",
+            "bile pigments",
+            "bilirubin",
+            "bile pıgment"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "BILE_SALTS": {
+          "displayName": "Bile Salts",
+          "synonyms": [
+            "bile salts",
+            "bile salt"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "OCCULT_BLOOD": {
+          "displayName": "Occult Blood",
+          "synonyms": [
+            "occult blood",
+            "blood",
+            "occult biood",
+            "ocçult biood",
+            "8lood",
+            "haemoglobin",
+            "hemoglobin"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "UROBILINOGEN": {
+          "displayName": "Urobilinogen",
+          "synonyms": [
+            "urobilinogen"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "NITRITE": {
+          "displayName": "Nitrite",
+          "synonyms": [
+            "nitrite",
+            "nitrites"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "LEUKOCYTE_ESTERASE": {
+          "displayName": "Leukocyte Esterase",
+          "synonyms": [
+            "leukocyte esterase",
+            "leukocyte",
+            "leukocytes",
+            "leucocyte esterase"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "PUS_CELLS": {
+          "displayName": "Pus Cells",
+          "synonyms": [
+            "pus cells",
+            "pus cell",
+            "wbc",
+            "white blood cells",
+            "white cells"
+          ],
+          "expectedUnits": ["/hpf"],
+          "valueType": "mixed",
+          "normalRange": {}
+        },
+        "EPITHELIAL_CELLS": {
+          "displayName": "Epithelial Cells",
+          "synonyms": [
+            "epithelial cells",
+            "epithelial cell",
+            "epithelial gells",
+            "epthelal cells",
+            "epi cells"
+          ],
+          "expectedUnits": ["/hpf"],
+          "valueType": "mixed",
+          "normalRange": {}
+        },
+        "RED_BLOOD_CELLS": {
+          "displayName": "Red Blood Cells",
+          "synonyms": [
+            "red blood cells",
+            "red blood cell",
+            "red biood cells",
+            "rbc",
+            "red cells"
+          ],
+          "expectedUnits": ["/hpf"],
+          "valueType": "mixed",
+          "normalRange": {}
+        },
+        "CASTS": {
+          "displayName": "Casts",
+          "synonyms": [
+            "casts",
+            "cast"
+          ],
+          "expectedUnits": ["/lpf"],
+          "valueType": "mixed",
+          "normalRange": {}
+        },
+        "CRYSTALS": {
+          "displayName": "Crystals",
+          "synonyms": [
+            "crystals",
+            "crystal"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "BACTERIA": {
+          "displayName": "Bacteria",
+          "synonyms": [
+            "bacteria"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "YEAST": {
+          "displayName": "Yeast",
+          "synonyms": [
+            "yeast",
+            "yeast cells"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        },
+        "MUCUS": {
+          "displayName": "Mucus",
+          "synonyms": [
+            "mucus",
+            "mucus threads"
+          ],
+          "expectedUnits": [],
+          "valueType": "qualitative",
+          "normalRange": {}
+        }
+      }
+    }
+  }
+}

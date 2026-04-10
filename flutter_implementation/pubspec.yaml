@@ -1,0 +1,48 @@
+name: medtrack
+description: A medical reports tracking and management application
+
+# Update the version as needed
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # HTTP client for API calls
+  http: ^1.1.0
+  
+  # Date formatting utilities
+  intl: ^0.18.1
+  
+  # State management (optional - add if needed)
+  # provider: ^6.1.1
+  
+  # Secure storage for tokens
+  # flutter_secure_storage: ^9.0.0
+  
+  # Icons
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Add custom fonts if needed
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
+  #       - asset: fonts/Roboto-Bold.ttf
+  #         weight: 700
+
+  # Add custom images/assets if needed
+  # assets:
+  #   - images/

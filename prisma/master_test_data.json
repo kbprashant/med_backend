@@ -1,0 +1,1183 @@
+{
+  "test_definitions": [
+    {
+      "test_id": "BT001",
+      "category_name": "Blood Tests",
+      "test_name": "Hemoglobin",
+      "parameter_name": "Hemoglobin",
+      "unit": "g/dL",
+      "normal_min_value": 12.0,
+      "normal_max_value": 17.0,
+      "risk_level_logic": {
+        "low": "< 12.0",
+        "normal": "12.0 - 17.0",
+        "high": "> 17.0"
+      },
+      "gender_specific": {
+        "male": { "min": 13.5, "max": 17.5 },
+        "female": { "min": 12.0, "max": 15.5 }
+      }
+    },
+    {
+      "test_id": "BT002",
+      "category_name": "Blood Tests",
+      "test_name": "RBC Count",
+      "parameter_name": "RBC Count",
+      "unit": "million cells/µL",
+      "normal_min_value": 4.5,
+      "normal_max_value": 5.9,
+      "risk_level_logic": {
+        "low": "< 4.5",
+        "normal": "4.5 - 5.9",
+        "high": "> 5.9"
+      },
+      "gender_specific": {
+        "male": { "min": 4.7, "max": 6.1 },
+        "female": { "min": 4.2, "max": 5.4 }
+      }
+    },
+    {
+      "test_id": "BT003",
+      "category_name": "Blood Tests",
+      "test_name": "WBC Count",
+      "parameter_name": "WBC Count",
+      "unit": "cells/µL",
+      "normal_min_value": 4000,
+      "normal_max_value": 11000,
+      "risk_level_logic": {
+        "low": "< 4000",
+        "normal": "4000 - 11000",
+        "high": "> 11000"
+      }
+    },
+    {
+      "test_id": "BT004",
+      "category_name": "Blood Tests",
+      "test_name": "Platelet Count",
+      "parameter_name": "Platelet Count",
+      "unit": "lakhs/µL",
+      "normal_min_value": 1.5,
+      "normal_max_value": 4.5,
+      "risk_level_logic": {
+        "low": "< 1.5",
+        "normal": "1.5 - 4.5",
+        "high": "> 4.5"
+      }
+    },
+    {
+      "test_id": "BT005",
+      "category_name": "Blood Tests",
+      "test_name": "Hematocrit",
+      "parameter_name": "Hematocrit",
+      "unit": "%",
+      "normal_min_value": 38.0,
+      "normal_max_value": 52.0,
+      "risk_level_logic": {
+        "low": "< 38.0",
+        "normal": "38.0 - 52.0",
+        "high": "> 52.0"
+      },
+      "gender_specific": {
+        "male": { "min": 40.0, "max": 54.0 },
+        "female": { "min": 36.0, "max": 48.0 }
+      }
+    },
+    {
+      "test_id": "BT006",
+      "category_name": "Blood Tests",
+      "test_name": "MCV",
+      "parameter_name": "MCV",
+      "unit": "fL",
+      "normal_min_value": 80.0,
+      "normal_max_value": 100.0,
+      "risk_level_logic": {
+        "low": "< 80.0",
+        "normal": "80.0 - 100.0",
+        "high": "> 100.0"
+      }
+    },
+    {
+      "test_id": "BT007",
+      "category_name": "Blood Tests",
+      "test_name": "MCH",
+      "parameter_name": "MCH",
+      "unit": "pg",
+      "normal_min_value": 27.0,
+      "normal_max_value": 33.0,
+      "risk_level_logic": {
+        "low": "< 27.0",
+        "normal": "27.0 - 33.0",
+        "high": "> 33.0"
+      }
+    },
+    {
+      "test_id": "BT008",
+      "category_name": "Blood Tests",
+      "test_name": "MCHC",
+      "parameter_name": "MCHC",
+      "unit": "g/dL",
+      "normal_min_value": 32.0,
+      "normal_max_value": 36.0,
+      "risk_level_logic": {
+        "low": "< 32.0",
+        "normal": "32.0 - 36.0",
+        "high": "> 36.0"
+      }
+    },
+    {
+      "test_id": "BT009",
+      "category_name": "Blood Tests",
+      "test_name": "ESR",
+      "parameter_name": "ESR",
+      "unit": "mm/hr",
+      "normal_min_value": 0,
+      "normal_max_value": 20,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 20",
+        "high": "> 20"
+      },
+      "gender_specific": {
+        "male": { "min": 0, "max": 15 },
+        "female": { "min": 0, "max": 20 }
+      }
+    },
+    {
+      "test_id": "BT010",
+      "category_name": "Blood Tests",
+      "test_name": "PCV",
+      "parameter_name": "PCV",
+      "unit": "%",
+      "normal_min_value": 36.0,
+      "normal_max_value": 48.0,
+      "risk_level_logic": {
+        "low": "< 36.0",
+        "normal": "36.0 - 48.0",
+        "high": "> 48.0"
+      }
+    },
+    {
+      "test_id": "BT011",
+      "category_name": "Blood Tests",
+      "test_name": "Neutrophils",
+      "parameter_name": "Neutrophils",
+      "unit": "%",
+      "normal_min_value": 40.0,
+      "normal_max_value": 75.0,
+      "risk_level_logic": {
+        "low": "< 40.0",
+        "normal": "40.0 - 75.0",
+        "high": "> 75.0"
+      }
+    },
+    {
+      "test_id": "BT012",
+      "category_name": "Blood Tests",
+      "test_name": "Lymphocytes",
+      "parameter_name": "Lymphocytes",
+      "unit": "%",
+      "normal_min_value": 20.0,
+      "normal_max_value": 45.0,
+      "risk_level_logic": {
+        "low": "< 20.0",
+        "normal": "20.0 - 45.0",
+        "high": "> 45.0"
+      }
+    },
+    {
+      "test_id": "BT013",
+      "category_name": "Blood Tests",
+      "test_name": "Monocytes",
+      "parameter_name": "Monocytes",
+      "unit": "%",
+      "normal_min_value": 2.0,
+      "normal_max_value": 10.0,
+      "risk_level_logic": {
+        "low": "< 2.0",
+        "normal": "2.0 - 10.0",
+        "high": "> 10.0"
+      }
+    },
+    {
+      "test_id": "BT014",
+      "category_name": "Blood Tests",
+      "test_name": "Eosinophils",
+      "parameter_name": "Eosinophils",
+      "unit": "%",
+      "normal_min_value": 1.0,
+      "normal_max_value": 6.0,
+      "risk_level_logic": {
+        "low": "< 1.0",
+        "normal": "1.0 - 6.0",
+        "high": "> 6.0"
+      }
+    },
+    {
+      "test_id": "BT015",
+      "category_name": "Blood Tests",
+      "test_name": "Basophils",
+      "parameter_name": "Basophils",
+      "unit": "%",
+      "normal_min_value": 0,
+      "normal_max_value": 2.0,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 2.0",
+        "high": "> 2.0"
+      }
+    },
+    {
+      "test_id": "UT001",
+      "category_name": "Urine Tests",
+      "test_name": "Urine pH",
+      "parameter_name": "pH",
+      "unit": "",
+      "normal_min_value": 4.5,
+      "normal_max_value": 8.0,
+      "risk_level_logic": {
+        "low": "< 4.5",
+        "normal": "4.5 - 8.0",
+        "high": "> 8.0"
+      }
+    },
+    {
+      "test_id": "UT002",
+      "category_name": "Urine Tests",
+      "test_name": "Specific Gravity",
+      "parameter_name": "Specific Gravity",
+      "unit": "",
+      "normal_min_value": 1.005,
+      "normal_max_value": 1.030,
+      "risk_level_logic": {
+        "low": "< 1.005",
+        "normal": "1.005 - 1.030",
+        "high": "> 1.030"
+      }
+    },
+    {
+      "test_id": "DM001",
+      "category_name": "Diabetes / Metabolic Tests",
+      "test_name": "Fasting Glucose",
+      "parameter_name": "Fasting Glucose",
+      "unit": "mg/dL",
+      "normal_min_value": 70,
+      "normal_max_value": 110,
+      "risk_level_logic": {
+        "low": "< 70",
+        "normal": "70 - 110",
+        "high": "> 110"
+      }
+    },
+    {
+      "test_id": "DM002",
+      "category_name": "Diabetes / Metabolic Tests",
+      "test_name": "Postprandial Glucose",
+      "parameter_name": "Postprandial Glucose",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 140,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 140",
+        "high": "> 140"
+      }
+    },
+    {
+      "test_id": "DM003",
+      "category_name": "Diabetes / Metabolic Tests",
+      "test_name": "Post Prandial Glucose",
+      "parameter_name": "Post Prandial Glucose",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 140,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 140",
+        "high": "> 140"
+      }
+    },
+    {
+      "test_id": "DM004",
+      "category_name": "Diabetes / Metabolic Tests",
+      "test_name": "Blood Sugar (Post Prandial)",
+      "parameter_name": "Blood sugar (Post Prandial)",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 140,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 140",
+        "high": "> 140"
+      }
+    },
+    {
+      "test_id": "DM005",
+      "category_name": "Diabetes / Metabolic Tests",
+      "test_name": "Random Glucose",
+      "parameter_name": "Random Glucose",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 140,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 140",
+        "high": "> 140"
+      }
+    },
+    {
+      "test_id": "DM006",
+      "category_name": "Diabetes / Metabolic Tests",
+      "test_name": "HbA1c",
+      "parameter_name": "HbA1c",
+      "unit": "%",
+      "normal_min_value": 4.0,
+      "normal_max_value": 5.7,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "4.0 - 5.7",
+        "high": "> 5.7"
+      }
+    },
+    {
+      "test_id": "UT003",
+      "category_name": "Urine Tests",
+      "test_name": "Protein",
+      "parameter_name": "Protein",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 8,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 8",
+        "high": "> 8"
+      }
+    },
+    {
+      "test_id": "UT004",
+      "category_name": "Urine Tests",
+      "test_name": "Glucose",
+      "parameter_name": "Glucose",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 15,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 15",
+        "high": "> 15"
+      }
+    },
+    {
+      "test_id": "UT005",
+      "category_name": "Urine Tests",
+      "test_name": "Ketones",
+      "parameter_name": "Ketones",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Negative",
+        "high": "Positive"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "UT006",
+      "category_name": "Urine Tests",
+      "test_name": "RBC in Urine",
+      "parameter_name": "RBC",
+      "unit": "cells/HPF",
+      "normal_min_value": 0,
+      "normal_max_value": 3,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 3",
+        "high": "> 3"
+      }
+    },
+    {
+      "test_id": "UT007",
+      "category_name": "Urine Tests",
+      "test_name": "WBC in Urine",
+      "parameter_name": "WBC",
+      "unit": "cells/HPF",
+      "normal_min_value": 0,
+      "normal_max_value": 5,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 5",
+        "high": "> 5"
+      }
+    },
+    {
+      "test_id": "UT008",
+      "category_name": "Urine Tests",
+      "test_name": "Casts",
+      "parameter_name": "Casts",
+      "unit": "/LPF",
+      "normal_min_value": 0,
+      "normal_max_value": 2,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "0 - 2",
+        "high": "> 2"
+      }
+    },
+    {
+      "test_id": "UT009",
+      "category_name": "Urine Tests",
+      "test_name": "Crystals",
+      "parameter_name": "Crystals",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Absent or Few",
+        "high": "Many"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "UT010",
+      "category_name": "Urine Tests",
+      "test_name": "Bilirubin",
+      "parameter_name": "Bilirubin",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Negative",
+        "high": "Positive"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "UT011",
+      "category_name": "Urine Tests",
+      "test_name": "Urobilinogen",
+      "parameter_name": "Urobilinogen",
+      "unit": "mg/dL",
+      "normal_min_value": 0.1,
+      "normal_max_value": 1.0,
+      "risk_level_logic": {
+        "low": "< 0.1",
+        "normal": "0.1 - 1.0",
+        "high": "> 1.0"
+      }
+    },
+    {
+      "test_id": "CT001",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "Total Cholesterol",
+      "parameter_name": "Total Cholesterol",
+      "unit": "mg/dL",
+      "normal_min_value": 125,
+      "normal_max_value": 200,
+      "risk_level_logic": {
+        "low": "< 125",
+        "normal": "125 - 200",
+        "high": "> 200"
+      }
+    },
+    {
+      "test_id": "CT002",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "HDL",
+      "parameter_name": "HDL Cholesterol",
+      "unit": "mg/dL",
+      "normal_min_value": 40,
+      "normal_max_value": 100,
+      "risk_level_logic": {
+        "low": "< 40",
+        "normal": "40 - 100",
+        "high": "> 100"
+      }
+    },
+    {
+      "test_id": "CT003",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "LDL",
+      "parameter_name": "LDL Cholesterol",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 100,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 100",
+        "high": "> 100"
+      }
+    },
+    {
+      "test_id": "CT004",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "VLDL",
+      "parameter_name": "VLDL Cholesterol",
+      "unit": "mg/dL",
+      "normal_min_value": 2,
+      "normal_max_value": 30,
+      "risk_level_logic": {
+        "low": "< 2",
+        "normal": "2 - 30",
+        "high": "> 30"
+      }
+    },
+    {
+      "test_id": "CT005",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "Triglycerides",
+      "parameter_name": "Triglycerides",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 150,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 150",
+        "high": "> 150"
+      }
+    },
+    {
+      "test_id": "CT006",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "Troponin",
+      "parameter_name": "Troponin I",
+      "unit": "ng/mL",
+      "normal_min_value": 0,
+      "normal_max_value": 0.04,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 0.04",
+        "high": "> 0.04"
+      }
+    },
+    {
+      "test_id": "CT007",
+      "category_name": "Heart / Cardiac Tests",
+      "test_name": "CK-MB",
+      "parameter_name": "CK-MB",
+      "unit": "U/L",
+      "normal_min_value": 0,
+      "normal_max_value": 25,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 25",
+        "high": "> 25"
+      }
+    },
+    {
+      "test_id": "LT001",
+      "category_name": "Lung / Respiratory Tests",
+      "test_name": "Oxygen Saturation",
+      "parameter_name": "SpO2",
+      "unit": "%",
+      "normal_min_value": 95,
+      "normal_max_value": 100,
+      "risk_level_logic": {
+        "low": "< 95",
+        "normal": "95 - 100",
+        "high": "N/A"
+      }
+    },
+    {
+      "test_id": "LT002",
+      "category_name": "Lung / Respiratory Tests",
+      "test_name": "Respiratory Rate",
+      "parameter_name": "Respiratory Rate",
+      "unit": "breaths/min",
+      "normal_min_value": 12,
+      "normal_max_value": 20,
+      "risk_level_logic": {
+        "low": "< 12",
+        "normal": "12 - 20",
+        "high": "> 20"
+      }
+    },
+    {
+      "test_id": "LT003",
+      "category_name": "Lung / Respiratory Tests",
+      "test_name": "FEV1",
+      "parameter_name": "FEV1",
+      "unit": "L",
+      "normal_min_value": 2.5,
+      "normal_max_value": 4.5,
+      "risk_level_logic": {
+        "low": "< 2.5",
+        "normal": "2.5 - 4.5",
+        "high": "> 4.5"
+      }
+    },
+    {
+      "test_id": "LT004",
+      "category_name": "Lung / Respiratory Tests",
+      "test_name": "FVC",
+      "parameter_name": "FVC",
+      "unit": "L",
+      "normal_min_value": 3.0,
+      "normal_max_value": 5.5,
+      "risk_level_logic": {
+        "low": "< 3.0",
+        "normal": "3.0 - 5.5",
+        "high": "> 5.5"
+      }
+    },
+    {
+      "test_id": "NT001",
+      "category_name": "Brain & Nervous System Tests",
+      "test_name": "Vitamin B12",
+      "parameter_name": "Vitamin B12",
+      "unit": "pg/mL",
+      "normal_min_value": 200,
+      "normal_max_value": 900,
+      "risk_level_logic": {
+        "low": "< 200",
+        "normal": "200 - 900",
+        "high": "> 900"
+      }
+    },
+    {
+      "test_id": "NT002",
+      "category_name": "Brain & Nervous System Tests",
+      "test_name": "Folate",
+      "parameter_name": "Folate",
+      "unit": "ng/mL",
+      "normal_min_value": 2.7,
+      "normal_max_value": 17.0,
+      "risk_level_logic": {
+        "low": "< 2.7",
+        "normal": "2.7 - 17.0",
+        "high": "> 17.0"
+      }
+    },
+    {
+      "test_id": "NT003",
+      "category_name": "Brain & Nervous System Tests",
+      "test_name": "EEG Result",
+      "parameter_name": "EEG",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Normal",
+        "high": "Abnormal"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "NT004",
+      "category_name": "Brain & Nervous System Tests",
+      "test_name": "CSF Glucose",
+      "parameter_name": "CSF Glucose",
+      "unit": "mg/dL",
+      "normal_min_value": 40,
+      "normal_max_value": 70,
+      "risk_level_logic": {
+        "low": "< 40",
+        "normal": "40 - 70",
+        "high": "> 70"
+      }
+    },
+    {
+      "test_id": "VT001",
+      "category_name": "Bone & Vitamin Tests",
+      "test_name": "Vitamin D",
+      "parameter_name": "Vitamin D",
+      "unit": "ng/mL",
+      "normal_min_value": 30,
+      "normal_max_value": 100,
+      "risk_level_logic": {
+        "low": "< 30",
+        "normal": "30 - 100",
+        "high": "> 100"
+      }
+    },
+    {
+      "test_id": "VT002",
+      "category_name": "Bone & Vitamin Tests",
+      "test_name": "Calcium",
+      "parameter_name": "Calcium",
+      "unit": "mg/dL",
+      "normal_min_value": 8.5,
+      "normal_max_value": 10.5,
+      "risk_level_logic": {
+        "low": "< 8.5",
+        "normal": "8.5 - 10.5",
+        "high": "> 10.5"
+      }
+    },
+    {
+      "test_id": "VT003",
+      "category_name": "Bone & Vitamin Tests",
+      "test_name": "Phosphorus",
+      "parameter_name": "Phosphorus",
+      "unit": "mg/dL",
+      "normal_min_value": 2.5,
+      "normal_max_value": 4.5,
+      "risk_level_logic": {
+        "low": "< 2.5",
+        "normal": "2.5 - 4.5",
+        "high": "> 4.5"
+      }
+    },
+    {
+      "test_id": "VT004",
+      "category_name": "Bone & Vitamin Tests",
+      "test_name": "Magnesium",
+      "parameter_name": "Magnesium",
+      "unit": "mg/dL",
+      "normal_min_value": 1.7,
+      "normal_max_value": 2.2,
+      "risk_level_logic": {
+        "low": "< 1.7",
+        "normal": "1.7 - 2.2",
+        "high": "> 2.2"
+      }
+    },
+    {
+      "test_id": "IT001",
+      "category_name": "Infection & Immunity Tests",
+      "test_name": "CRP",
+      "parameter_name": "C-Reactive Protein",
+      "unit": "mg/L",
+      "normal_min_value": 0,
+      "normal_max_value": 3,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 3",
+        "high": "> 3"
+      }
+    },
+    {
+      "test_id": "IT002",
+      "category_name": "Infection & Immunity Tests",
+      "test_name": "HIV Test",
+      "parameter_name": "HIV",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Non-Reactive / Negative",
+        "high": "Reactive / Positive"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "IT003",
+      "category_name": "Infection & Immunity Tests",
+      "test_name": "HBsAg",
+      "parameter_name": "HBsAg",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Non-Reactive / Negative",
+        "high": "Reactive / Positive"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "IT004",
+      "category_name": "Infection & Immunity Tests",
+      "test_name": "Widal Test",
+      "parameter_name": "Widal Test",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Negative (< 1:80)",
+        "high": "Positive (>= 1:80)"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "IT005",
+      "category_name": "Infection & Immunity Tests",
+      "test_name": "Dengue NS1",
+      "parameter_name": "Dengue NS1 Antigen",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Negative",
+        "high": "Positive"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "IT006",
+      "category_name": "Infection & Immunity Tests",
+      "test_name": "COVID Antibody",
+      "parameter_name": "COVID-19 Antibody",
+      "unit": "",
+      "normal_min_value": null,
+      "normal_max_value": null,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "Negative / Non-Reactive",
+        "high": "Positive / Reactive"
+      },
+      "is_qualitative": true
+    },
+    {
+      "test_id": "CAN001",
+      "category_name": "Cancer Related Tests",
+      "test_name": "PSA",
+      "parameter_name": "Prostate Specific Antigen",
+      "unit": "ng/mL",
+      "normal_min_value": 0,
+      "normal_max_value": 4.0,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 4.0",
+        "high": "> 4.0"
+      }
+    },
+    {
+      "test_id": "CAN002",
+      "category_name": "Cancer Related Tests",
+      "test_name": "CA-125",
+      "parameter_name": "Cancer Antigen 125",
+      "unit": "U/mL",
+      "normal_min_value": 0,
+      "normal_max_value": 35,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 35",
+        "high": "> 35"
+      }
+    },
+    {
+      "test_id": "CAN003",
+      "category_name": "Cancer Related Tests",
+      "test_name": "AFP",
+      "parameter_name": "Alpha-Fetoprotein",
+      "unit": "ng/mL",
+      "normal_min_value": 0,
+      "normal_max_value": 10,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 10",
+        "high": "> 10"
+      }
+    },
+    {
+      "test_id": "CAN004",
+      "category_name": "Cancer Related Tests",
+      "test_name": "CEA",
+      "parameter_name": "Carcinoembryonic Antigen",
+      "unit": "ng/mL",
+      "normal_min_value": 0,
+      "normal_max_value": 3.0,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 3.0",
+        "high": "> 3.0"
+      }
+    },
+    {
+      "test_id": "HT001",
+      "category_name": "Hormone Tests",
+      "test_name": "TSH",
+      "parameter_name": "Thyroid Stimulating Hormone",
+      "unit": "µIU/mL",
+      "normal_min_value": 0.4,
+      "normal_max_value": 4.5,
+      "risk_level_logic": {
+        "low": "< 0.4",
+        "normal": "0.4 - 4.5",
+        "high": "> 4.5"
+      }
+    },
+    {
+      "test_id": "HT002",
+      "category_name": "Hormone Tests",
+      "test_name": "T3",
+      "parameter_name": "Triiodothyronine",
+      "unit": "ng/dL",
+      "normal_min_value": 80,
+      "normal_max_value": 200,
+      "risk_level_logic": {
+        "low": "< 80",
+        "normal": "80 - 200",
+        "high": "> 200"
+      }
+    },
+    {
+      "test_id": "HT003",
+      "category_name": "Hormone Tests",
+      "test_name": "T4",
+      "parameter_name": "Thyroxine",
+      "unit": "µg/dL",
+      "normal_min_value": 5.0,
+      "normal_max_value": 12.0,
+      "risk_level_logic": {
+        "low": "< 5.0",
+        "normal": "5.0 - 12.0",
+        "high": "> 12.0"
+      }
+    },
+    {
+      "test_id": "HT004",
+      "category_name": "Hormone Tests",
+      "test_name": "Insulin",
+      "parameter_name": "Insulin",
+      "unit": "µIU/mL",
+      "normal_min_value": 2.0,
+      "normal_max_value": 25.0,
+      "risk_level_logic": {
+        "low": "< 2.0",
+        "normal": "2.0 - 25.0",
+        "high": "> 25.0"
+      }
+    },
+    {
+      "test_id": "HT005",
+      "category_name": "Hormone Tests",
+      "test_name": "Cortisol",
+      "parameter_name": "Cortisol",
+      "unit": "µg/dL",
+      "normal_min_value": 6.0,
+      "normal_max_value": 23.0,
+      "risk_level_logic": {
+        "low": "< 6.0",
+        "normal": "6.0 - 23.0",
+        "high": "> 23.0"
+      }
+    },
+    {
+      "test_id": "HT006",
+      "category_name": "Hormone Tests",
+      "test_name": "Prolactin",
+      "parameter_name": "Prolactin",
+      "unit": "ng/mL",
+      "normal_min_value": 2.0,
+      "normal_max_value": 29.0,
+      "risk_level_logic": {
+        "low": "< 2.0",
+        "normal": "2.0 - 29.0",
+        "high": "> 29.0"
+      },
+      "gender_specific": {
+        "male": { "min": 2.0, "max": 18.0 },
+        "female": { "min": 2.0, "max": 29.0 }
+      }
+    },
+    {
+      "test_id": "LFT001",
+      "category_name": "Liver Function Tests",
+      "test_name": "Bilirubin Total",
+      "parameter_name": "Total Bilirubin",
+      "unit": "mg/dL",
+      "normal_min_value": 0.1,
+      "normal_max_value": 1.2,
+      "risk_level_logic": {
+        "low": "< 0.1",
+        "normal": "0.1 - 1.2",
+        "high": "> 1.2"
+      }
+    },
+    {
+      "test_id": "LFT002",
+      "category_name": "Liver Function Tests",
+      "test_name": "Bilirubin Direct",
+      "parameter_name": "Direct Bilirubin",
+      "unit": "mg/dL",
+      "normal_min_value": 0,
+      "normal_max_value": 0.3,
+      "risk_level_logic": {
+        "low": "N/A",
+        "normal": "< 0.3",
+        "high": "> 0.3"
+      }
+    },
+    {
+      "test_id": "LFT003",
+      "category_name": "Liver Function Tests",
+      "test_name": "SGPT / ALT",
+      "parameter_name": "ALT",
+      "unit": "U/L",
+      "normal_min_value": 7,
+      "normal_max_value": 56,
+      "risk_level_logic": {
+        "low": "< 7",
+        "normal": "7 - 56",
+        "high": "> 56"
+      }
+    },
+    {
+      "test_id": "LFT004",
+      "category_name": "Liver Function Tests",
+      "test_name": "SGOT / AST",
+      "parameter_name": "AST",
+      "unit": "U/L",
+      "normal_min_value": 10,
+      "normal_max_value": 40,
+      "risk_level_logic": {
+        "low": "< 10",
+        "normal": "10 - 40",
+        "high": "> 40"
+      }
+    },
+    {
+      "test_id": "LFT005",
+      "category_name": "Liver Function Tests",
+      "test_name": "Alkaline Phosphatase",
+      "parameter_name": "Alkaline Phosphatase",
+      "unit": "U/L",
+      "normal_min_value": 44,
+      "normal_max_value": 147,
+      "risk_level_logic": {
+        "low": "< 44",
+        "normal": "44 - 147",
+        "high": "> 147"
+      }
+    },
+    {
+      "test_id": "LFT006",
+      "category_name": "Liver Function Tests",
+      "test_name": "Albumin",
+      "parameter_name": "Albumin",
+      "unit": "g/dL",
+      "normal_min_value": 3.5,
+      "normal_max_value": 5.5,
+      "risk_level_logic": {
+        "low": "< 3.5",
+        "normal": "3.5 - 5.5",
+        "high": "> 5.5"
+      }
+    },
+    {
+      "test_id": "LFT007",
+      "category_name": "Liver Function Tests",
+      "test_name": "Globulin",
+      "parameter_name": "Globulin",
+      "unit": "g/dL",
+      "normal_min_value": 2.0,
+      "normal_max_value": 3.5,
+      "risk_level_logic": {
+        "low": "< 2.0",
+        "normal": "2.0 - 3.5",
+        "high": "> 3.5"
+      }
+    },
+    {
+      "test_id": "KFT001",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "Serum Creatinine",
+      "parameter_name": "Creatinine",
+      "unit": "mg/dL",
+      "normal_min_value": 0.6,
+      "normal_max_value": 1.3,
+      "risk_level_logic": {
+        "low": "< 0.6",
+        "normal": "0.6 - 1.3",
+        "high": "> 1.3"
+      },
+      "gender_specific": {
+        "male": { "min": 0.7, "max": 1.3 },
+        "female": { "min": 0.6, "max": 1.1 }
+      }
+    },
+    {
+      "test_id": "KFT002",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "Blood Urea",
+      "parameter_name": "Blood Urea",
+      "unit": "mg/dL",
+      "normal_min_value": 15,
+      "normal_max_value": 45,
+      "risk_level_logic": {
+        "low": "< 15",
+        "normal": "15 - 45",
+        "high": "> 45"
+      }
+    },
+    {
+      "test_id": "KFT003",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "BUN",
+      "parameter_name": "Blood Urea Nitrogen",
+      "unit": "mg/dL",
+      "normal_min_value": 7,
+      "normal_max_value": 20,
+      "risk_level_logic": {
+        "low": "< 7",
+        "normal": "7 - 20",
+        "high": "> 20"
+      }
+    },
+    {
+      "test_id": "KFT004",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "Uric Acid",
+      "parameter_name": "Uric Acid",
+      "unit": "mg/dL",
+      "normal_min_value": 3.5,
+      "normal_max_value": 7.2,
+      "risk_level_logic": {
+        "low": "< 3.5",
+        "normal": "3.5 - 7.2",
+        "high": "> 7.2"
+      },
+      "gender_specific": {
+        "male": { "min": 3.5, "max": 7.2 },
+        "female": { "min": 2.6, "max": 6.0 }
+      }
+    },
+    {
+      "test_id": "KFT005",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "Sodium",
+      "parameter_name": "Sodium",
+      "unit": "mEq/L",
+      "normal_min_value": 136,
+      "normal_max_value": 145,
+      "risk_level_logic": {
+        "low": "< 136",
+        "normal": "136 - 145",
+        "high": "> 145"
+      }
+    },
+    {
+      "test_id": "KFT006",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "Potassium",
+      "parameter_name": "Potassium",
+      "unit": "mEq/L",
+      "normal_min_value": 3.5,
+      "normal_max_value": 5.0,
+      "risk_level_logic": {
+        "low": "< 3.5",
+        "normal": "3.5 - 5.0",
+        "high": "> 5.0"
+      }
+    },
+    {
+      "test_id": "KFT007",
+      "category_name": "Kidney / Renal Tests",
+      "test_name": "Chloride",
+      "parameter_name": "Chloride",
+      "unit": "mEq/L",
+      "normal_min_value": 96,
+      "normal_max_value": 106,
+      "risk_level_logic": {
+        "low": "< 96",
+        "normal": "96 - 106",
+        "high": "> 106"
+      }
+    }
+  ],
+  "metadata": {
+    "total_tests": 81,
+    "categories": 12,
+    "version": "1.0.1",
+    "created_date": "2026-02-05",
+    "updated_date": "2026-02-26",
+    "description": "Master test data for MedTrack health report analysis system"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "_comment": "Flexible JSON structure for storing urine analysis reports",
+  "reportId": "UR-2026-02-18-001",
+  "userId": "user123",
+  "reportDate": "2026-02-18T10:30:00Z",
+  "labName": "Crystal Lab",
+  
+  "physical": {
+    "quantity": {
+      "name": "Quantity",
+      "value": "10 ml",
+      "numericValue": 10,
+      "unit": "ml",
+      "confidence": 10
+    },
+    "color": {
+      "name": "Color",
+      "value": "Yellowish",
+      "qualitative": "Yellowish",
+      "confidence": 10
+    },
+    "appearance": {
+      "name": "Appearance",
+      "value": "Clear",
+      "qualitative": "Clear",
+      "confidence": 10
+    },
+    "deposit": {
+      "name": "Deposit",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    }
+  },
+  
+  "chemical": {
+    "pH": {
+      "name": "pH",
+      "value": "Acidic",
+      "qualitative": "Acidic",
+      "numericValue": 6.0,
+      "referenceRange": "4.5-8.0",
+      "confidence": 10
+    },
+    "specificGravity": {
+      "name": "Specific Gravity",
+      "value": 1.011,
+      "numericValue": 1.011,
+      "referenceRange": "1.005-1.030",
+      "confidence": 10
+    },
+    "protein": {
+      "name": "Proteins",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "sugar": {
+      "name": "Sugar",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "ketone": {
+      "name": "Ketone",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "bilePigment": {
+      "name": "Bile Pigment",
+      "value": "Trace",
+      "qualitative": "Trace",
+      "isAbnormal": true,
+      "confidence": 10
+    },
+    "bileSalts": {
+      "name": "Bile Salts",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "occultBlood": {
+      "name": "Occult Blood",
+      "value": "Trace",
+      "qualitative": "Trace",
+      "isAbnormal": true,
+      "confidence": 10
+    },
+    "urobilinogen": {
+      "name": "Urobilinogen",
+      "value": "Normal",
+      "qualitative": "Normal",
+      "confidence": 10
+    }
+  },
+  
+  "microscopic": {
+    "pusCells": {
+      "name": "Pus Cells",
+      "value": "Few Seen",
+      "qualitative": "Few Seen",
+      "range": { "min": 2, "max": 4 },
+      "unit": "cells/hpf",
+      "referenceRange": "0-5 cells/hpf",
+      "confidence": 10
+    },
+    "epithelialCells": {
+      "name": "Epithelial Cells",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "redBloodCells": {
+      "name": "Red Blood Cells",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "casts": {
+      "name": "Casts",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    },
+    "crystals": {
+      "name": "Crystals",
+      "value": "Absent",
+      "qualitative": "Absent",
+      "confidence": 10
+    }
+  },
+  
+  "additionalParameters": [
+    {
+      "name": "Bacteria",
+      "value": "Few",
+      "qualitative": "Few",
+      "isAbnormal": true,
+      "confidence": 8
+    }
+  ],
+  
+  "rawOcrText": "Crystal Data Inc.\nROUTINE URINE EXAMINATION\n...",
+  
+  "extractionMetadata": {
+    "method": "OCR",
+    "confidence": 85,
+    "extractedAt": "2026-02-18T10:31:00Z",
+    "processingTimeMs": 450
+  },
+  
+  "notes": "",
+  "interpretation": "Trace bile pigment and occult blood detected. Few pus cells seen. Recommend clinical correlation.",
+  
+  "createdAt": "2026-02-18T10:31:00Z",
+  "updatedAt": "2026-02-18T10:31:00Z"
+}

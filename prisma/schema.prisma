@@ -1,0 +1,309 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String   @id @default(uuid())
+  name             String
+  email            String   @unique
+  phoneNumber      String   @unique
+  passwordHash     String
+  isVerified       Boolean  @default(false)
+  profileImage     String?  // Store profile image path/URL for persistent storage
+  dateOfBirth      DateTime?
+  gender           String?
+  bloodGroup       String?
+  address          String?
+  medicalHistory   String?  @db.Text
+  currentMedicines String?  @db.Text
+  fcmToken         String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  otpVerifications OtpVerification[]
+  reports          Report[]
+  healthSummaries  HealthSummary[]
+  appointments     Appointment[]
+  notifications    Notification[]
+
+  @@map("users")
+}
+
+model OtpVerification {
+  id        String   @id @default(uuid())
+  userId    String
+  otpCode   String
+  attempts  Int      @default(0)
+  expiresAt DateTime
+  verified  Boolean  @default(false)
+  purpose   String   // "registration" or "password_reset"
+  createdAt DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("otp_verifications")
+}
+
+model LabCenter {
+  id          String   @id @default(uuid())
+  centerName  String
+  type        String   // "lab" or "scan"
+  location    String?
+  phoneNumber String?
+  email       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  reports Report[]
+
+  @@index([centerName])
+  @@map("lab_centers")
+}
+
+model Report {
+  id          String   @id @default(uuid())
+  userId      String
+  centerId    String?
+  testType    String
+  reportDate  DateTime
+  category    String   // "Lab Reports" or "Imaging Reports"
+  subcategory String?  // "Blood Tests", "X-Ray", etc.
+  filePath    String?  // Store file location
+  fileName    String?
+  ocrText     String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user            User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  labCenter       LabCenter?      @relation(fields: [centerId], references: [id], onDelete: SetNull)
+  testResults     TestResult[]
+  healthSummaries HealthSummary[]
+
+  @@index([userId, category, subcategory])
+  @@index([reportDate])
+  @@map("reports")
+}
+
+model TestMaster {
+  id          String   @id @default(uuid())
+  testName    String   @unique
+  category    String   // "Lab Reports" or "Imaging Reports"
+  subcategory String   // "Blood Tests", "X-Ray", etc.
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  parameters TestParameter[]
+
+  @@index([category, subcategory])
+  @@map("test_master")
+}
+
+model TestParameter {
+  id            String   @id @default(uuid())
+  testId        String
+  parameterName String
+  unit          String?
+  normalMin     Float?
+  normalMax     Float?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  test        TestMaster   @relation(fields: [testId], references: [id], onDelete: Cascade)
+  testResults TestResult[]
+
+  @@index([testId])
+  @@index([parameterName])
+  @@map("test_parameters")
+}
+
+model TestResult {
+  id                String   @id @default(uuid())
+  reportId          String
+  testDefinitionId  String?  // Link to TestDefinition (preferred)
+  parameterId       String?  // DEPRECATED: Old link to TestParameter
+  testCategory      String   // e.g., "Blood Test", "Thyroid Test"
+  testSubCategory   String?  // e.g., "TSH", "T3", "T4"
+  testName          String   // e.g., "Thyroid Test"
+  parameterName     String   // e.g., "TSH"
+  value             String   // Actual test value
+  unit              String?  // Unit of measurement
+  status            String   // "NORMAL", "HIGH", "LOW"
+  referenceRange    String?  // Human-readable reference range
+  normalMin         Float?   // Minimum normal value
+  normalMax         Float?   // Maximum normal value
+  testDate          DateTime // Date when test was conducted
+  createdAt         DateTime @default(now())
+
+  report         Report          @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  testDefinition TestDefinition? @relation(fields: [testDefinitionId], references: [id], onDelete: SetNull)
+  parameter      TestParameter?  @relation(fields: [parameterId], references: [id], onDelete: SetNull)
+
+  @@index([testName, testDate])
+  @@index([testCategory, testSubCategory])
+  @@index([reportId])
+  @@index([testDefinitionId])
+  @@map("test_results")
+}
+
+model HealthSummary {
+  id              String   @id @default(uuid())
+  userId          String
+  reportId        String   // Single report ID for this summary
+  summaryText     String   @db.Text
+  insights        String?  @db.Text
+  overallStatus   String   // "NORMAL", "CAUTION", "CRITICAL"
+  abnormalCount   Int      @default(0)
+  riskLevel       String   @default("LOW") // "LOW", "MEDIUM", "HIGH"
+  keyIssues       String?  @db.Text // JSON array of key health issues
+  recommendations String?  @db.Text // JSON array of recommendations
+  createdAt       DateTime @default(now())
+
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@index([userId, reportId])
+  @@map("health_summaries")
+}
+
+model TestDefinition {
+  id              String   @id @default(uuid())
+  testId          String   @unique // e.g., "BT001", "CT001"
+  categoryName    String   // e.g., "Blood Tests", "Heart / Cardiac Tests"
+  testName        String   // e.g., "Hemoglobin", "Total Cholesterol"
+  parameterName   String   // e.g., "Hemoglobin", "HDL Cholesterol"
+  unit            String   // e.g., "g/dL", "mg/dL"
+  normalMinValue  Float?   // Minimum normal value (null for qualitative tests)
+  normalMaxValue  Float?   // Maximum normal value (null for qualitative tests)
+  riskLevelLogic  String   @db.Text // JSON string with low/normal/high logic
+  isQualitative   Boolean  @default(false) // True for tests like "Positive/Negative"
+  genderSpecific  String?  @db.Text // JSON string with male/female specific ranges
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  testResults TestResult[] // Link to actual test results
+
+  @@index([categoryName])
+  @@index([testName])
+  @@index([testId])
+  @@index([parameterName])
+  @@map("test_definitions")
+}
+
+// ============= APPOINTMENT & DOCTOR MANAGEMENT MODELS =============
+
+model Doctor {
+  id             String   @id @default(uuid())
+  name           String
+  phoneNumber    String   @unique
+  email          String   @unique
+  passwordHash   String
+  specialization String
+  hospital       String?
+  clinicName     String?
+  clinicAddress  String?  @db.Text
+  profilePhoto   String?
+  isVerified     Boolean  @default(false)
+  fcmToken       String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  schedules          DoctorSchedule[]
+  appointments       Appointment[]
+  otpVerifications   DoctorOtpVerification[]
+  notifications      Notification[]
+
+  @@index([specialization])
+  @@index([email])
+  @@map("doctors")
+}
+
+model DoctorOtpVerification {
+  id        String   @id @default(uuid())
+  doctorId  String
+  otpCode   String
+  attempts  Int      @default(0)
+  expiresAt DateTime
+  verified  Boolean  @default(false)
+  purpose   String   // "registration" or "password_reset"
+  createdAt DateTime @default(now())
+
+  doctor Doctor @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@map("doctor_otp_verifications")
+}
+
+model DoctorSchedule {
+  id          String   @id @default(uuid())
+  doctorId    String
+  dayOfWeek   String   // "Monday", "Tuesday", etc.
+  startTime   String   // "10:00"
+  endTime     String   // "13:00"
+  maxPatients Int
+  availability String  @default("available") // "available", "unavailable", "doubtful"
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  doctor       Doctor        @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  appointments Appointment[]
+
+  @@index([doctorId, dayOfWeek])
+  @@map("doctor_schedule")
+}
+
+model Appointment {
+  id                                    String    @id @default(uuid())
+  patientId                             String
+  doctorId                              String
+  scheduleId                            String?
+  appointmentDate                       DateTime  @db.Date
+  queueNumber                           Int?
+  status                                String    @default("pending") // pending, confirmed, rejected, completed, cancelled
+  bookingTime                           String?   // Time slot like "10:00 AM"
+  notes                                 String?   @db.Text // Patient's notes/reason for visit
+  cancellationReason                    String?   @db.Text // Reason for cancellation
+  appointmentStartNotificationSent      Boolean   @default(false)
+  createdAt                             DateTime  @default(now())
+  updatedAt                             DateTime  @updatedAt
+
+  patient  User            @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  doctor   Doctor          @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  schedule DoctorSchedule? @relation(fields: [scheduleId], references: [id], onDelete: SetNull)
+
+  // Unique constraint: no duplicate queue numbers for same doctor/date/schedule
+  @@unique([doctorId, appointmentDate, scheduleId, queueNumber], name: "queue_uniqueness")
+  
+  // Performance indexes
+  @@index([patientId])
+  @@index([doctorId, appointmentDate])
+  @@index([status])
+  @@index([doctorId, appointmentDate, scheduleId, status], name: "queue_lookup")
+  
+  @@map("appointments")
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    String?
+  doctorId  String?
+  title     String
+  message   String   @db.Text
+  type      String   @default("general")
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  doctor Doctor? @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([doctorId])
+  @@map("notifications")
+}
+

@@ -1,0 +1,440 @@
+{
+  "GLUCOSE": {
+    "name": "Blood Glucose Test",
+    "keywords": ["glucose", "blood sugar", "fasting", "pp", "post prandial", "fbs", "ppbs"],
+    "parameters": [
+      {
+        "name": "Fasting Glucose",
+        "aliases": ["Fasting Glucose", "Blood Sugar (Fasting)", "Blood sugar(Fasting)", "Fasting Blood Sugar", "FBS", "Glucose Fasting"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 70, "max": 100 }
+      },
+      {
+        "name": "Post Prandial Glucose",
+        "aliases": ["Post Prandial Glucose", "Blood Sugar (Post Prandial)", "Blood sugar (Post Prandial)", "Blood Sugar (Post)", "Blood Sugar Post", "PP", "PPBS", "Glucose PP", "PP Glucose", "Post Prandial", "Postprandial"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 70, "max": 140 }
+      }
+    ]
+  },
+  "KFT": {
+    "name": "Kidney Function Test",
+    "keywords": ["kidney", "renal", "kft", "urea", "creatinine"],
+    "parameters": [
+      {
+        "name": "Urea",
+        "aliases": ["Urea", "Blood Urea", "Serum Urea", "Urea Nitrogen"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 15, "max": 40 }
+      },
+      {
+        "name": "Creatinine",
+        "aliases": ["Creatinine", "Serum Creatinine", "Creat"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 0.7, "max": 1.3 }
+      },
+      {
+        "name": "Uric Acid",
+        "aliases": ["Uric Acid", "Serum Uric Acid"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 3.5, "max": 7.2 }
+      },
+      {
+        "name": "Calcium",
+        "aliases": ["Calcium", "Serum Calcium", "Total Calcium", "Ca"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 8.5, "max": 10.5 }
+      },
+      {
+        "name": "Phosphorus",
+        "aliases": ["Phosphorus", "Serum Phosphorus", "Inorganic Phosphorus", "Phosphate"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 2.5, "max": 4.5 }
+      },
+      {
+        "name": "Alkaline Phosphatase",
+        "aliases": ["Alkaline Phosphatase", "ALP", "Alk Phos"],
+        "unit": "U/L",
+        "referenceRange": { "min": 30, "max": 120 }
+      },
+      {
+        "name": "Total Protein",
+        "aliases": ["Total Protein", "Serum Protein"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 6.0, "max": 8.0 }
+      },
+      {
+        "name": "Albumin",
+        "aliases": ["Albumin", "Serum Albumin"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 3.5, "max": 5.5 }
+      },
+      {
+        "name": "Sodium",
+        "aliases": ["Sodium", "Na", "Serum Sodium"],
+        "unit": "mEq/L",
+        "referenceRange": { "min": 135, "max": 145 }
+      },
+      {
+        "name": "Potassium",
+        "aliases": ["Potassium", "K", "Serum Potassium"],
+        "unit": "mEq/L",
+        "referenceRange": { "min": 3.5, "max": 5.0 }
+      },
+      {
+        "name": "Chloride",
+        "aliases": ["Chloride", "Cl", "Serum Chloride"],
+        "unit": "mEq/L",
+        "referenceRange": { "min": 98, "max": 107 }
+      }
+    ]
+  },
+  "CBC": {
+    "name": "Complete Blood Count",
+    "keywords": ["cbc", "complete blood count", "hemoglobin", "wbc", "rbc", "platelets", "blood count"],
+    "parameters": [
+      {
+        "name": "Hemoglobin",
+        "aliases": ["Hemoglobin", "Hb", "HGB", "Haemoglobin"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 12.0, "max": 16.0 }
+      },
+      {
+        "name": "RBC",
+        "aliases": ["RBC", "Red Blood Cells", "Red Blood Cell Count", "Erythrocytes"],
+        "unit": "million/μL",
+        "referenceRange": { "min": 4.5, "max": 5.5 }
+      },
+      {
+        "name": "WBC",
+        "aliases": ["WBC", "White Blood Cells", "White Blood Cell Count", "Leucocytes", "Total WBC", "TLC"],
+        "unit": "cells/μL",
+        "referenceRange": { "min": 4000, "max": 11000 }
+      },
+      {
+        "name": "Platelets",
+        "aliases": ["Platelets", "Platelet Count", "PLT"],
+        "unit": "lakhs/μL",
+        "referenceRange": { "min": 1.5, "max": 4.5 }
+      },
+      {
+        "name": "Hematocrit",
+        "aliases": ["Hematocrit", "HCT", "PCV", "Packed Cell Volume"],
+        "unit": "%",
+        "referenceRange": { "min": 36, "max": 46 }
+      },
+      {
+        "name": "MCV",
+        "aliases": ["MCV", "Mean Corpuscular Volume"],
+        "unit": "fL",
+        "referenceRange": { "min": 80, "max": 100 }
+      },
+      {
+        "name": "MCH",
+        "aliases": ["MCH", "Mean Corpuscular Hemoglobin"],
+        "unit": "pg",
+        "referenceRange": { "min": 27, "max": 32 }
+      },
+      {
+        "name": "MCHC",
+        "aliases": ["MCHC", "Mean Corpuscular Hemoglobin Concentration"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 32, "max": 36 }
+      }
+    ]
+  },
+  "LFT": {
+    "name": "Liver Function Test",
+    "keywords": ["liver", "hepatic", "lft", "sgpt", "sgot", "bilirubin", "alt", "ast"],
+    "parameters": [
+      {
+        "name": "SGPT (ALT)",
+        "aliases": ["SGPT", "ALT", "SGPT (ALT)", "Alanine Aminotransferase"],
+        "unit": "U/L",
+        "referenceRange": { "min": 10, "max": 40 }
+      },
+      {
+        "name": "SGOT (AST)",
+        "aliases": ["SGOT", "AST", "SGOT (AST)", "Aspartate Aminotransferase"],
+        "unit": "U/L",
+        "referenceRange": { "min": 10, "max": 40 }
+      },
+      {
+        "name": "Alkaline Phosphatase",
+        "aliases": ["Alkaline Phosphatase", "ALP", "Alk Phos"],
+        "unit": "U/L",
+        "referenceRange": { "min": 30, "max": 120 }
+      },
+      {
+        "name": "Bilirubin (Total)",
+        "aliases": ["Bilirubin Total", "Total Bilirubin", "Serum Bilirubin"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 0.3, "max": 1.2 }
+      },
+      {
+        "name": "Bilirubin (Direct)",
+        "aliases": ["Bilirubin Direct", "Direct Bilirubin", "Conjugated Bilirubin"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 0.0, "max": 0.3 }
+      },
+      {
+        "name": "Total Protein",
+        "aliases": ["Total Protein", "Serum Protein"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 6.0, "max": 8.0 }
+      },
+      {
+        "name": "Albumin",
+        "aliases": ["Albumin", "Serum Albumin"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 3.5, "max": 5.5 }
+      },
+      {
+        "name": "Globulin",
+        "aliases": ["Globulin", "Serum Globulin"],
+        "unit": "g/dL",
+        "referenceRange": { "min": 2.0, "max": 3.5 }
+      }
+    ]
+  },
+  "LIPID": {
+    "name": "Lipid Profile",
+    "keywords": ["lipid", "cholesterol", "hdl", "ldl", "triglycerides"],
+    "parameters": [
+      {
+        "name": "Total Cholesterol",
+        "aliases": ["Total Cholesterol", "Cholesterol", "Total Chol"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 0, "max": 200 }
+      },
+      {
+        "name": "HDL Cholesterol",
+        "aliases": ["HDL", "HDL Cholesterol", "High Density Lipoprotein"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 40, "max": 60 }
+      },
+      {
+        "name": "LDL Cholesterol",
+        "aliases": ["LDL", "LDL Cholesterol", "Low Density Lipoprotein"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 0, "max": 100 }
+      },
+      {
+        "name": "VLDL Cholesterol",
+        "aliases": ["VLDL", "VLDL Cholesterol", "Very Low Density Lipoprotein"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 2, "max": 30 }
+      },
+      {
+        "name": "Triglycerides",
+        "aliases": ["Triglycerides", "TG", "Trig"],
+        "unit": "mg/dL",
+        "referenceRange": { "min": 0, "max": 150 }
+      }
+    ]
+  },
+  "THYROID": {
+    "name": "Thyroid Function Test",
+    "keywords": ["thyroid", "tsh", "t3", "t4", "thyroxine"],
+    "parameters": [
+      {
+        "name": "TSH",
+        "aliases": ["TSH", "Thyroid Stimulating Hormone"],
+        "unit": "μIU/mL",
+        "referenceRange": { "min": 0.5, "max": 5.0 }
+      },
+      {
+        "name": "Free T3",
+        "aliases": ["Free T3", "FT3", "T3 Free"],
+        "unit": "pg/mL",
+        "referenceRange": { "min": 2.3, "max": 4.2 }
+      },
+      {
+        "name": "Free T4",
+        "aliases": ["Free T4", "FT4", "T4 Free"],
+        "unit": "ng/dL",
+        "referenceRange": { "min": 0.8, "max": 1.8 }
+      },
+      {
+        "name": "Total T3",
+        "aliases": ["Total T3", "T3", "T3 Total"],
+        "unit": "ng/dL",
+        "referenceRange": { "min": 80, "max": 200 }
+      },
+      {
+        "name": "Total T4",
+        "aliases": ["Total T4", "T4", "T4 Total"],
+        "unit": "μg/dL",
+        "referenceRange": { "min": 5.0, "max": 12.0 }
+      }
+    ]
+  },
+  "BLOOD_PRESSURE": {
+    "name": "Blood Pressure",
+    "keywords": ["blood pressure", "bp", "systolic", "diastolic"],
+    "parameters": [
+      {
+        "name": "Systolic BP",
+        "aliases": ["Systolic", "SYS", "Systolic BP"],
+        "unit": "mmHg",
+        "referenceRange": { "min": 90, "max": 120 }
+      },
+      {
+        "name": "Diastolic BP",
+        "aliases": ["Diastolic", "DIA", "Diastolic BP"],
+        "unit": "mmHg",
+        "referenceRange": { "min": 60, "max": 80 }
+      },
+      {
+        "name": "Pulse",
+        "aliases": ["Pulse", "PUL", "Heart Rate", "Pulse Rate"],
+        "unit": "bpm",
+        "referenceRange": { "min": 60, "max": 100 }
+      }
+    ]
+  },
+  "URINE": {
+    "name": "Urine Examination",
+    "keywords": ["urine", "urinalysis", "routine urine", "urine examination", "urine test", "routine urine examination"],
+    "parameters": [
+      {
+        "name": "Quantity",
+        "aliases": ["Quantity", "Volume"],
+        "unit": "ml",
+        "referenceRange": {}
+      },
+      {
+        "name": "Color",
+        "aliases": ["Color", "Colour"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Appearance",
+        "aliases": ["Appearance", "Clarity", "Turbidity"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Deposit",
+        "aliases": ["Deposit", "Sediment"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "pH",
+        "aliases": ["pH", "Reaction"],
+        "unit": "",
+        "referenceRange": { "min": 4.5, "max": 8.0 }
+      },
+      {
+        "name": "Specific Gravity",
+        "aliases": ["Specific Gravity", "Sp Gravity", "Sp Gr", "SG", "Specilc Gravty"],
+        "unit": "",
+        "referenceRange": { "min": 1.003, "max": 1.030 }
+      },
+      {
+        "name": "Protein",
+        "aliases": ["Protein", "Proteins", "Albumin"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Sugar",
+        "aliases": ["Sugar", "Glucose", "Reducing Substances"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Ketone",
+        "aliases": ["Ketone", "Ketones", "Ketone Bodies", "Acetone"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Bile Pigment",
+        "aliases": ["Bile Pigment", "Bile Pigments", "Bilirubin", "Bile Pıgment"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Bile Salts",
+        "aliases": ["Bile Salts", "Bile Salt"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Occult Blood",
+        "aliases": ["Occult Blood", "Blood", "Occult Biood", "Haemoglobin", "Hemoglobin"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Urobilinogen",
+        "aliases": ["Urobilinogen"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Nitrite",
+        "aliases": ["Nitrite", "Nitrites"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Leukocyte Esterase",
+        "aliases": ["Leukocyte Esterase", "Leukocyte", "Leukocytes", "Leucocyte Esterase"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Pus Cells",
+        "aliases": ["Pus Cells", "Pus Cell", "WBC", "White Blood Cells"],
+        "unit": "/hpf",
+        "referenceRange": {}
+      },
+      {
+        "name": "Epithelial Cells",
+        "aliases": ["Epithelial Cells", "Epithelial Cell", "Epthelal Cells", "Epi Cells"],
+        "unit": "/hpf",
+        "referenceRange": {}
+      },
+      {
+        "name": "Red Blood Cells",
+        "aliases": ["Red Blood Cells", "Red Blood Cell", "Red Biood Cells", "RBC"],
+        "unit": "/hpf",
+        "referenceRange": {}
+      },
+      {
+        "name": "Casts",
+        "aliases": ["Casts", "Cast"],
+        "unit": "/lpf",
+        "referenceRange": {}
+      },
+      {
+        "name": "Crystals",
+        "aliases": ["Crystals", "Crystal"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Bacteria",
+        "aliases": ["Bacteria"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Yeast",
+        "aliases": ["Yeast", "Yeast Cells"],
+        "unit": "",
+        "referenceRange": {}
+      },
+      {
+        "name": "Mucus",
+        "aliases": ["Mucus", "Mucus Threads"],
+        "unit": "",
+        "referenceRange": {}
+      }
+    ]
+  }
+}

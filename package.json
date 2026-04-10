@@ -1,0 +1,50 @@
+{
+  "name": "medtrack-backend",
+  "version": "1.0.0",
+  "description": "Healthcare mobile app backend - MedTrack",
+  "main": "server.js",
+  "scripts": {
+    "build": "prisma generate",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:migrate:deploy": "prisma migrate deploy",
+    "prisma:push": "prisma db push",
+    "prisma:studio": "prisma studio",
+    "seed:tests": "node prisma/seed_test_definitions.js"
+  },
+  "keywords": [
+    "healthcare",
+    "medical",
+    "backend",
+    "express",
+    "postgresql"
+  ],
+  "author": "",
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.0",
+    "firebase-admin": "^13.7.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "pdf-parse": "^2.4.5",
+    "pdf-poppler": "^0.2.3",
+    "pg": "^8.13.1",
+    "sharp": "^0.34.5",
+    "tesseract.js": "^5.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prisma": "^5.22.0"
+  }
+}
